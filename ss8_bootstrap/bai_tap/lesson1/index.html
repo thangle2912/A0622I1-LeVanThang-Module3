@@ -2,9 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Tạo gallery đơn giản sử dụng Bootstrap</title>
+    <link rel="stylesheet" href="../../../bootstrap-5.0.2-dist/css/bootstrap.css">
+    <style>
+
+
+        .responsive {
+
+            width: 24.99999%;
+        }
+
+        @media only screen and (max-width: 700px){
+            .responsive {
+                width: 49.99999%;
+
+            }
+        }
+
+        @media only screen and (max-width: 500px){
+            .responsive {
+                width: 100%;
+            }
+        }
+
+
+    </style>
 </head>
 <body>
-$END$
+<div class="">
+    <h2>Responsive Image Gallery</h2>
+    <h4>Resize the browser window to see the effect.</h4>
+    <div class="row">
+        <div class="responsive card ">
+            <img src="http://demo.codegym.vn/web/15/gallery/img_fjords.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+        </div>
+        <div class=" responsive card " >
+            <img src="http://demo.codegym.vn/web/15/gallery/img_fjords.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+        </div>
+        <div class="responsive card " >
+            <img src="http://demo.codegym.vn/web/15/gallery/img_fjords.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+        </div>
+        <div class="responsive card ">
+            <img src="http://demo.codegym.vn/web/15/gallery/img_fjords.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+        </div>
+    </div>
+    <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
+</div>
+<script src="../../../bootstrap-5.0.2-dist/js/bootstrap.js"></script>
 </body>
 </html>
