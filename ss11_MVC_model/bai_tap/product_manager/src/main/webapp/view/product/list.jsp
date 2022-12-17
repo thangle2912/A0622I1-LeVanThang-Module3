@@ -53,49 +53,10 @@
                 <td>${product.getAmount()}</td>
                 <td>${product.getCategory()}</td>
                 <td>
-                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#detailProduct">
+                    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#detailProduct"
+                            onclick="showProductDetail('${product.getName()}','${product.getPrice()}','${product.getAmount()}','${product.getCategory()}')">
                         Chi tiết
                     </button>
-                    <div class="modal fade" id="detailProduct" tabindex="-1" aria-labelledby="exampleModalLabel"
-                         aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel"> Chi tiết sản phẩm</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="container-fluid">
-                                        <div class="row">
-                                            <div class="col-md-4"><h5>Tên sản phẩm</h5></div>
-                                            <h5></h5>
-                                            <div class="col-md-8 ms-auto">${product.getName()}</div>
-                                        </div>
-                                        <hr>
-                                        <div class="row">
-                                            <div class="col-md-4"><h5>Giá sản phẩm</h5></div>
-                                            <div class="col-md-8 ms-auto">${product.getPrice()}</div>
-                                        </div>
-                                        <hr>
-                                        <div class="row">
-                                            <div class="col-md-4"><h5>Số lượng</h5></div>
-                                            <div class="col-md-8 ms-auto">${product.getAmount()}</div>
-                                        </div>
-                                        <hr>
-                                        <div class="row">
-                                            <div class="col-md-4"><h5>Danh mục</h5></div>
-                                            <div class="col-md-8 ms-auto">${product.getCategory()}</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </td>
                 <td>
                     <a href="/product?action=edit&&id=${product.getId()}">
@@ -113,6 +74,7 @@
         </c:forEach>
         </tbody>
     </table>
+    <%--    Modal delete--%>
     <div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false"
          tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -139,6 +101,47 @@
             </div>
         </div>
     </div>
+    <%--    Modal detail--%>
+    <div class="modal fade" id="detailProduct" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                                     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Chi tiết sản phẩm</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4"><h5>Tên sản phẩm</h5></div>
+                        <h5></h5>
+                        <div class="col-md-8 ms-auto" id="showNameDetail"></div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-4"><h5>Giá sản phẩm</h5></div>
+                        <div class="col-md-8 ms-auto" id="showPriceDetail"></div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-4"><h5>Số lượng</h5></div>
+                        <div class="col-md-8 ms-auto" id="showAmountDetail"></div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-4"><h5>Danh mục</h5></div>
+                        <div class="col-md-8 ms-auto" id="showCategoryDetail"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
 </div>
 
@@ -147,12 +150,14 @@
 <script>
     function deleteProduct(id, name) {
         document.getElementById('nameProductDelete').innerText = name;
-        let deleteBtn = document.getElementById('deleteOption');
         document.getElementById('idDelete').value = id;
-
-
     }
-
+    function showProductDetail(name,price,amount,category) {
+        document.getElementById("showNameDetail").innerText=name;
+        document.getElementById("showPriceDetail").innerText=price;
+        document.getElementById("showAmountDetail").innerText=amount;
+        document.getElementById("showCategoryDetail").innerText=category;
+    }
 
 </script>
 </html>
