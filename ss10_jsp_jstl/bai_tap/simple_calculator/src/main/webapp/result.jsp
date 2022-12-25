@@ -8,9 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>Kết quả</title>
 </head>
 <body>
-$END$
+<div >
+    <h1>${result}</h1>
+</div>
 </body>
 </html>
