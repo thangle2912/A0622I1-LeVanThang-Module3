@@ -20,42 +20,27 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <a href="/product"><button type="button" class="btn btn-primary" style="margin: 10px">Quay lại danh sách</button></a>
+            <a href="/user"><button type="button" class="btn btn-primary" style="margin: 10px">Quay lại danh sách</button></a>
         </div>
     </div>
-    <form class=" g-3" action="/product?action=create" method="post">
+    <h3>${mess}</h3>
+    <form class=" g-3" action="/user?action=create" method="post">
         <div class="row">
             <div class="col-md-6">
-                <label for="id" class="form-label">ID sản phẩm</label>
-                <input type="number" class="form-control" id="id" name="id">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <label for="name" class="form-label">Tên sản phẩm</label>
+                <label for="name" class="form-label">Tên người dùng</label>
                 <input type="text" class="form-control" id="name" name="name">
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <label for="price" class="form-label">Đơn giá</label>
-                <input type="number" class="form-control" id="price" name="price">
+                <label for="price" class="form-label">Email</label>
+                <input type="email" class="form-control" id="price" name="email">
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <label for="amount" class="form-label">Số lượng</label>
-                <input type="number" class="form-control" id="amount" name="amount">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <label for="id" class="form-label">Danh mục</label>
-                <select class="form-select" aria-label="Default select example" name="category">
-                    <option selected value="SamSung">SamSung</option>
-                    <option value="Nokia">Nokia</option>
-                    <option value="IPhone">IPhone</option>
-                </select>
+                <label for="amount" class="form-label">Country</label>
+                <input type="text" class="form-control" id="amount" name="country">
             </div>
         </div>
         <div class="row">

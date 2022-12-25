@@ -10,12 +10,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
   <head>
-    <title>Quản lý sản phẩm</title>
+    <title>Quản lý người dùng</title>
     <link rel="stylesheet" href="../../../css/bootstrap.css">
   </head>
   <body>
   <h1>Trang index</h1>
-  <c:redirect url="/product"></c:redirect>
+  <c:redirect url="/user"></c:redirect>
 
   </body>
 </html>

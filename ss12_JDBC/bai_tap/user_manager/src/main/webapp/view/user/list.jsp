@@ -15,6 +15,9 @@
 <body>
 <c:import url="nav.jsp"></c:import>
 <div class="container">
+    <div class="row">
+        <h4> ${messDelete}</h4>
+    </div>
     <div class="row" style="margin: 10px">
         <div class="col-3">
             <a href="/user?action=create">
@@ -29,7 +32,7 @@
             </form>
         </div>
     </div>
-
+    <h5 style="color: red">${messDelete}</h5>
     <table class="table">
         <thead>
         <tr>
@@ -84,7 +87,7 @@
                         </button>
                         <button type="submit" class="btn btn-danger">Xoá</button>
                         <input  hidden name="id"  type="text" id="idDelete">
-                        <input  hidden name="action" value="delete"  type="text" id="">
+                        <input  hidden name="action" value="delete"  type="text" >
 
                     </div>
                 </form>
