@@ -1,0 +1,19 @@
+.sidebar {
+    background-color: #1e2125;
+}
+
+.navbar {
+    min-height: 100px;
+}
+
+.body {
+    margin-top: 100px;
+}
+.navbar-custom{
+    position: sticky;
+    top: 0px;
+}
+.header-custom{
+    width: 100%;
+    height: 100px;
+}
